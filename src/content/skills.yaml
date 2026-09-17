@@ -1,6 +1,7 @@
 # =============================================================================
 # TECHNICAL SKILLS  (one entry per category)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # `items` are skill names (language-neutral). Category names are localized.
 # `order` controls display position (lower first).
 
@@ -13,7 +14,7 @@
 - category:
     en: "Frameworks & Tools"
     id: "Framework & Alat"
-  items: ["React", "Astro", "Node.js", "Tailwind CSS", "Git"]
+  items: ["React", "Astro", "Node.js", "Tailwind CSS", "Git", "REST APIs"]
   order: 2
 
 - category:
@@ -23,7 +24,13 @@
   order: 3
 
 - category:
+    en: "Data & Analytics"
+    id: "Data & Analitik"
+  items: ["Pandas", "Power BI", "Excel", "Data Visualization"]
+  order: 4
+
+- category:
     en: "Business & Analysis"
     id: "Bisnis & Analisis"
-  items: ["Requirements Analysis", "Process Modeling (BPMN)", "Data Visualization", "Excel"]
-  order: 4
+  items: ["Requirements Analysis", "Process Modeling (BPMN)", "Systems Analysis", "Agile / Scrum"]
+  order: 5

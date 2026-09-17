@@ -1,41 +1,43 @@
 # =============================================================================
 # PROJECTS  (each item is one project card)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # `tags` are technology names (language-neutral). Omit `githubUrl` / `demoUrl`
 # if a link does not exist — the card hides the missing button automatically.
 # `order` controls display position (lower first). `featured: true` adds a badge.
 
 - title:
-    en: "[PLACEHOLDER] Inventory Management System"
-    id: "[PLACEHOLDER] Sistem Manajemen Inventaris"
+    en: "Warehouse Inventory Management System"
+    id: "Sistem Manajemen Inventaris Gudang"
   description:
-    en: "[PLACEHOLDER] A full-stack system for tracking warehouse inventory with real-time low-stock alerts and reporting."
-    id: "[PLACEHOLDER] Sistem full-stack untuk melacak inventaris gudang dengan peringatan stok rendah secara real-time dan pelaporan."
-  tags: ["React", "Node.js", "PostgreSQL"]
-  githubUrl: "https://github.com/your-username/inventory-system"
-  demoUrl: "https://your-demo.example.com"
+    en: "Full-stack system to track warehouse stock with real-time low-stock alerts and automated reorder reports. Replaced a manual spreadsheet process, reducing stock-count errors during a class capstone project."
+    id: "Sistem full-stack untuk melacak stok gudang dengan peringatan stok rendah secara real-time dan laporan pemesanan ulang otomatis. Menggantikan proses spreadsheet manual dan mengurangi kesalahan penghitungan stok pada proyek capstone."
+  tags: ["React", "Node.js", "PostgreSQL", "Express"]
+  githubUrl: "https://github.com/gracelatriana/inventory-system"
+  demoUrl: "https://inventory-demo.example.com"
   featured: true
   order: 1
 
 - title:
-    en: "[PLACEHOLDER] Campus Event Finder"
-    id: "[PLACEHOLDER] Pencari Acara Kampus"
+    en: "Campus Event Finder"
+    id: "Pencari Acara Kampus"
   description:
-    en: "[PLACEHOLDER] A mobile-friendly web app that aggregates and filters campus events by category and date."
-    id: "[PLACEHOLDER] Aplikasi web ramah seluler yang mengumpulkan dan memfilter acara kampus berdasarkan kategori dan tanggal."
+    en: "A mobile-friendly web app that aggregates campus events and lets students filter by category, date, and faculty. Built to solve the problem of scattered event announcements across chat groups."
+    id: "Aplikasi web ramah seluler yang mengumpulkan acara kampus dan memungkinkan mahasiswa memfilter berdasarkan kategori, tanggal, dan fakultas. Dibuat untuk mengatasi pengumuman acara yang tersebar di berbagai grup chat."
   tags: ["Astro", "Tailwind CSS", "TypeScript"]
-  githubUrl: "https://github.com/your-username/event-finder"
+  githubUrl: "https://github.com/gracelatriana/event-finder"
   # demoUrl omitted on purpose => the "Live Demo" button is hidden
   featured: false
   order: 2
 
 - title:
-    en: "[PLACEHOLDER] Sales Data Dashboard"
-    id: "[PLACEHOLDER] Dasbor Data Penjualan"
+    en: "Sales Data Dashboard"
+    id: "Dasbor Data Penjualan"
   description:
-    en: "[PLACEHOLDER] An interactive dashboard visualizing sales trends and KPIs for a small business case study."
-    id: "[PLACEHOLDER] Dasbor interaktif yang memvisualisasikan tren penjualan dan KPI untuk studi kasus bisnis kecil."
+    en: "An interactive dashboard visualizing sales trends, top products, and monthly KPIs for a small-business case study. Includes a written analysis of seasonal demand patterns."
+    id: "Dasbor interaktif yang memvisualisasikan tren penjualan, produk terlaris, dan KPI bulanan untuk studi kasus bisnis kecil. Menyertakan analisis tertulis tentang pola permintaan musiman."
   tags: ["Python", "Pandas", "Streamlit"]
-  # both links omitted on purpose => no link buttons render
+  githubUrl: "https://github.com/gracelatriana/sales-dashboard"
+  # demoUrl omitted on purpose
   featured: false
   order: 3

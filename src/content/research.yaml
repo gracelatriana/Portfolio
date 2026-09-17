@@ -1,18 +1,31 @@
 # =============================================================================
 # RESEARCH / PUBLICATIONS  (optional)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # If you have NO research to show, delete every entry below (leave the file
 # with just comments, or an empty list `[]`). The whole Research section AND
 # its nav link are hidden automatically when this collection is empty.
 
 - title:
-    en: "[PLACEHOLDER] A Study on User Adoption of Mobile Banking"
-    id: "[PLACEHOLDER] Studi Adopsi Pengguna Layanan Mobile Banking"
+    en: "Factors Influencing Mobile Banking Adoption Among University Students"
+    id: "Faktor-Faktor yang Memengaruhi Adopsi Mobile Banking di Kalangan Mahasiswa"
   venue:
-    en: "[PLACEHOLDER] Undergraduate Research Symposium"
-    id: "[PLACEHOLDER] Simposium Penelitian Sarjana"
+    en: "BINUS Undergraduate Research Symposium"
+    id: "Simposium Penelitian Sarjana BINUS"
   date: "2024-05"
   summary:
-    en: "[PLACEHOLDER] Investigated factors influencing mobile banking adoption among university students using a survey-based approach and regression analysis."
-    id: "[PLACEHOLDER] Menyelidiki faktor-faktor yang memengaruhi adopsi mobile banking di kalangan mahasiswa menggunakan pendekatan berbasis survei dan analisis regresi."
-  link: "https://example.com/your-paper.pdf"
+    en: "Investigated the drivers of mobile banking adoption among 210 university students using a survey and multiple regression analysis. Found perceived security and ease of use to be the strongest predictors of adoption intent."
+    id: "Menyelidiki pendorong adopsi mobile banking pada 210 mahasiswa menggunakan survei dan analisis regresi berganda. Menemukan bahwa persepsi keamanan dan kemudahan penggunaan menjadi prediktor terkuat niat adopsi."
+  link: "https://example.com/mobile-banking-paper.pdf"
+
+- title:
+    en: "Improving Campus Service Queues with Process Mapping"
+    id: "Meningkatkan Antrean Layanan Kampus dengan Pemetaan Proses"
+  venue:
+    en: "Business Process Management Course Project"
+    id: "Proyek Mata Kuliah Manajemen Proses Bisnis"
+  date: "2023-12"
+  summary:
+    en: "Analyzed the student administration service workflow using BPMN and proposed process improvements projected to reduce average waiting time by roughly 40%."
+    id: "Menganalisis alur layanan administrasi mahasiswa menggunakan BPMN dan mengusulkan perbaikan proses yang diproyeksikan mengurangi rata-rata waktu tunggu sekitar 40%."
+  # link omitted on purpose => no read-link renders

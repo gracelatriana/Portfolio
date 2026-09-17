@@ -1,38 +1,43 @@
 # =============================================================================
 # EDUCATION  (each list item is one entry; newest is shown first automatically)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # Add a new entry by copying a block. `endDate` may be omitted => "Present".
 
 - degree:
-    en: "[PLACEHOLDER] Bachelor of Information Systems"
-    id: "[PLACEHOLDER] Sarjana Sistem Informasi"
+    en: "Bachelor of Information Systems"
+    id: "Sarjana Sistem Informasi"
   institution:
-    en: "[PLACEHOLDER] Your University"
-    id: "[PLACEHOLDER] Universitas Anda"
+    en: "Bina Nusantara University"
+    id: "Universitas Bina Nusantara"
   startDate: "2022-09"
-  endDate: "2026-07"
+  # endDate omitted => shows "Present" / "Sekarang" (still ongoing)
   coursework:
     en:
       - "Database Systems"
       - "Web Application Development"
       - "Data Structures & Algorithms"
       - "Business Process Management"
+      - "Systems Analysis & Design"
     id:
       - "Sistem Basis Data"
       - "Pengembangan Aplikasi Web"
       - "Struktur Data & Algoritma"
       - "Manajemen Proses Bisnis"
+      - "Analisis & Perancangan Sistem"
   honors:
     en:
-      - "[PLACEHOLDER] Dean's List (2023, 2024)"
+      - "GPA 3.78 / 4.00"
+      - "Dean's List (2023, 2024)"
     id:
-      - "[PLACEHOLDER] Daftar Dekan (2023, 2024)"
+      - "IPK 3,78 / 4,00"
+      - "Daftar Dekan (2023, 2024)"
 
 - degree:
-    en: "[PLACEHOLDER] High School Diploma, Science Major"
-    id: "[PLACEHOLDER] Ijazah SMA, Jurusan IPA"
+    en: "High School Diploma, Science Major"
+    id: "Ijazah SMA, Jurusan IPA"
   institution:
-    en: "[PLACEHOLDER] Your High School"
-    id: "[PLACEHOLDER] SMA Anda"
+    en: "SMA Negeri 8 Jakarta"
+    id: "SMA Negeri 8 Jakarta"
   startDate: "2019-07"
   endDate: "2022-06"

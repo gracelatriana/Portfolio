@@ -1,35 +1,35 @@
 # =============================================================================
-# SITE METADATA + BIO + SOCIAL LINKS  (edit these placeholders with your info)
+# SITE METADATA + BIO + SOCIAL LINKS
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # All localized fields have an `en` (English) and `id` (Indonesian) variant.
-# Replace every "[PLACEHOLDER ...]" value below with your real content.
 
-name: "Your Name"
+name: "Grace Latriana"
 
 tagline:
   en: "Information Systems Student"
   id: "Mahasiswa Sistem Informasi"
 
 roleTarget:
-  en: "Aspiring Business Analyst / Software Developer"
-  id: "Calon Business Analyst / Pengembang Perangkat Lunak"
+  en: "Aspiring Business Analyst & Data-Driven Developer"
+  id: "Calon Business Analyst & Pengembang Berbasis Data"
 
 valueProp:
-  en: "[PLACEHOLDER] I build data-driven solutions that connect business needs with technology. Currently seeking internship and entry-level opportunities."
-  id: "[PLACEHOLDER] Saya membangun solusi berbasis data yang menghubungkan kebutuhan bisnis dengan teknologi. Saat ini mencari peluang magang dan posisi entry-level."
+  en: "I turn messy business processes into clean, data-driven systems. Currently seeking a 2025 internship where I can bridge business needs and technology."
+  id: "Saya mengubah proses bisnis yang rumit menjadi sistem yang rapi dan berbasis data. Saat ini mencari magang 2025 untuk menjembatani kebutuhan bisnis dan teknologi."
 
 bio:
-  en: "[PLACEHOLDER] I am an Information Systems student passionate about the intersection of business and technology. My interests include data analysis, web development, and systems design. I am actively seeking internships and professional opportunities where I can apply my skills and continue to grow."
-  id: "[PLACEHOLDER] Saya adalah mahasiswa Sistem Informasi yang tertarik pada persimpangan antara bisnis dan teknologi. Minat saya meliputi analisis data, pengembangan web, dan perancangan sistem. Saya aktif mencari magang dan peluang profesional untuk menerapkan keterampilan dan terus berkembang."
+  en: "I'm a third-year Information Systems student at Bina Nusantara University with a strong interest in business analysis, data analytics, and web development. I enjoy understanding how organizations work, mapping their processes, and building tools that make those processes faster and smarter. I'm actively looking for internship opportunities where I can contribute to real projects and keep growing as a systems and data professional."
+  id: "Saya mahasiswa Sistem Informasi tahun ketiga di Universitas Bina Nusantara dengan minat kuat pada analisis bisnis, analitik data, dan pengembangan web. Saya senang memahami cara kerja organisasi, memetakan prosesnya, dan membangun alat yang membuat proses tersebut lebih cepat dan cerdas. Saat ini saya aktif mencari peluang magang untuk berkontribusi pada proyek nyata sekaligus terus berkembang sebagai profesional sistem dan data."
 
-email: "your.email@example.com"
+email: "grace.latriana@example.com"
 
 location:
   en: "Jakarta, Indonesia"
   id: "Jakarta, Indonesia"
 
-linkedin: "https://www.linkedin.com/in/your-profile"
-github: "https://github.com/your-username"
+linkedin: "https://www.linkedin.com/in/grace-latriana"
+github: "https://github.com/gracelatriana"
 
 # Files below must be placed in the /public folder. See README for details.
 resumeFile: "/resume.pdf"

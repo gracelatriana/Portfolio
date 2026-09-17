@@ -1,38 +1,39 @@
 # =============================================================================
 # EXPERIENCE  (internships / work; newest shown first automatically)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # Omit `endDate` for a current role => it renders as "Present" / "Sekarang".
 
 - title:
-    en: "[PLACEHOLDER] Data Analyst Intern"
-    id: "[PLACEHOLDER] Magang Analis Data"
+    en: "Data Analyst Intern"
+    id: "Magang Analis Data"
   organization:
-    en: "[PLACEHOLDER] Example Company"
-    id: "[PLACEHOLDER] Perusahaan Contoh"
+    en: "PT Nusantara Retail Solutions"
+    id: "PT Nusantara Retail Solutions"
   startDate: "2024-06"
   endDate: "2024-08"
   bullets:
     en:
-      - "[PLACEHOLDER] Cleaned and analyzed operational datasets to surface actionable insights."
-      - "[PLACEHOLDER] Built dashboards that reduced weekly reporting time by an estimated 30%."
-      - "[PLACEHOLDER] Collaborated with a cross-functional team to define reporting requirements."
+      - "Cleaned and analyzed 50k+ rows of monthly sales data using SQL and Python, cutting manual data-prep time from 3 hours to 20 minutes."
+      - "Built 4 interactive Power BI dashboards that reduced weekly reporting effort by an estimated 30% for the operations team."
+      - "Partnered with 3 stakeholder teams to translate business questions into clear reporting requirements."
     id:
-      - "[PLACEHOLDER] Membersihkan dan menganalisis dataset operasional untuk menghasilkan wawasan yang dapat ditindaklanjuti."
-      - "[PLACEHOLDER] Membangun dasbor yang mengurangi waktu pelaporan mingguan sekitar 30%."
-      - "[PLACEHOLDER] Berkolaborasi dengan tim lintas fungsi untuk menentukan kebutuhan pelaporan."
+      - "Membersihkan dan menganalisis lebih dari 50.000 baris data penjualan bulanan menggunakan SQL dan Python, memangkas waktu penyiapan data manual dari 3 jam menjadi 20 menit."
+      - "Membangun 4 dasbor Power BI interaktif yang mengurangi upaya pelaporan mingguan sekitar 30% untuk tim operasional."
+      - "Berkolaborasi dengan 3 tim pemangku kepentingan untuk menerjemahkan pertanyaan bisnis menjadi kebutuhan pelaporan yang jelas."
 
 - title:
-    en: "[PLACEHOLDER] Web Development Volunteer"
-    id: "[PLACEHOLDER] Relawan Pengembangan Web"
+    en: "Web Development Volunteer"
+    id: "Relawan Pengembangan Web"
   organization:
-    en: "[PLACEHOLDER] Student Organization"
-    id: "[PLACEHOLDER] Organisasi Mahasiswa"
+    en: "BINUS Student Tech Community"
+    id: "Komunitas Teknologi Mahasiswa BINUS"
   startDate: "2023-09"
   # endDate omitted on purpose => shows "Present" / "Sekarang"
   bullets:
     en:
-      - "[PLACEHOLDER] Maintained and updated the organization's website content."
-      - "[PLACEHOLDER] Implemented responsive layout improvements for mobile users."
+      - "Maintain and update the community website serving 500+ student members."
+      - "Redesigned the events page with a mobile-first layout, improving mobile usability and load speed."
     id:
-      - "[PLACEHOLDER] Memelihara dan memperbarui konten situs web organisasi."
-      - "[PLACEHOLDER] Menerapkan peningkatan tata letak responsif untuk pengguna seluler."
+      - "Memelihara dan memperbarui situs web komunitas yang melayani lebih dari 500 anggota mahasiswa."
+      - "Merancang ulang halaman acara dengan tata letak mobile-first, meningkatkan kegunaan seluler dan kecepatan muat."

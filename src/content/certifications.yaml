@@ -1,25 +1,35 @@
 # =============================================================================
 # CERTIFICATIONS  (optional)
 # =============================================================================
+# NOTE: This is DUMMY DATA for preview. Replace with your real information.
 # If you have NO certifications, delete every entry below (or use `[]`). The
 # whole Certifications section AND its nav link are hidden automatically when
 # this collection is empty.
 # Omit `credentialUrl` if there is no verification link.
 
 - name:
-    en: "[PLACEHOLDER] Google Data Analytics Certificate"
-    id: "[PLACEHOLDER] Sertifikat Google Data Analytics"
+    en: "Google Data Analytics Professional Certificate"
+    id: "Sertifikat Profesional Google Data Analytics"
   issuer:
-    en: "[PLACEHOLDER] Coursera / Google"
-    id: "[PLACEHOLDER] Coursera / Google"
+    en: "Coursera / Google"
+    id: "Coursera / Google"
   date: "2024-03"
-  credentialUrl: "https://example.com/verify/your-credential"
+  credentialUrl: "https://coursera.org/verify/professional-cert/example"
 
 - name:
-    en: "[PLACEHOLDER] Responsive Web Design"
-    id: "[PLACEHOLDER] Desain Web Responsif"
+    en: "SQL for Data Science"
+    id: "SQL untuk Data Science"
   issuer:
-    en: "[PLACEHOLDER] freeCodeCamp"
-    id: "[PLACEHOLDER] freeCodeCamp"
+    en: "Coursera / UC Davis"
+    id: "Coursera / UC Davis"
   date: "2023-11"
+  credentialUrl: "https://coursera.org/verify/example-sql"
+
+- name:
+    en: "Responsive Web Design"
+    id: "Desain Web Responsif"
+  issuer:
+    en: "freeCodeCamp"
+    id: "freeCodeCamp"
+  date: "2023-08"
   # credentialUrl omitted on purpose => no verify link renders
