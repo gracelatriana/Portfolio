@@ -1,0 +1,25 @@
+# =============================================================================
+# CERTIFICATIONS  (optional)
+# =============================================================================
+# If you have NO certifications, delete every entry below (or use `[]`). The
+# whole Certifications section AND its nav link are hidden automatically when
+# this collection is empty.
+# Omit `credentialUrl` if there is no verification link.
+
+- name:
+    en: "[PLACEHOLDER] Google Data Analytics Certificate"
+    id: "[PLACEHOLDER] Sertifikat Google Data Analytics"
+  issuer:
+    en: "[PLACEHOLDER] Coursera / Google"
+    id: "[PLACEHOLDER] Coursera / Google"
+  date: "2024-03"
+  credentialUrl: "https://example.com/verify/your-credential"
+
+- name:
+    en: "[PLACEHOLDER] Responsive Web Design"
+    id: "[PLACEHOLDER] Desain Web Responsif"
+  issuer:
+    en: "[PLACEHOLDER] freeCodeCamp"
+    id: "[PLACEHOLDER] freeCodeCamp"
+  date: "2023-11"
+  # credentialUrl omitted on purpose => no verify link renders

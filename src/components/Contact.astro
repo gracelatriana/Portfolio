@@ -1,0 +1,93 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import Icons from "./Icons.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick } from "../i18n/utils";
+
+interface LocalizedText {
+  en: string;
+  id: string;
+}
+
+interface Props {
+  locale: Locale;
+  email: string;
+  location: LocalizedText;
+  linkedin: string;
+  github: string;
+}
+
+const { locale, email, location, linkedin, github } = Astro.props;
+const t = useTranslations(locale);
+const newTab = t("a11y.opensNewTab");
+---
+
+<section id="contact" class="section bg-surface">
+  <div class="container-content">
+    <SectionHeading title={t("section.contact")} />
+    <div class="grid gap-8 md:grid-cols-2">
+      <div data-reveal>
+        <p class="text-lg leading-relaxed text-body">{t("contact.intro")}</p>
+        <a href={`mailto:${email}`} class="btn-primary mt-6">
+          <Icons name="mail" class="h-4 w-4" />
+          {t("contact.emailMe")}
+        </a>
+      </div>
+
+      <ul class="space-y-4" data-reveal>
+        <li class="flex items-center gap-3">
+          <span class="rounded-lg bg-white p-2 text-teal ring-1 ring-border">
+            <Icons name="mail" class="h-5 w-5" />
+          </span>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-body/70">
+              {t("contact.email")}
+            </p>
+            <a href={`mailto:${email}`} class="text-sm font-medium text-ink hover:text-navy">
+              {email}
+            </a>
+          </div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="rounded-lg bg-white p-2 text-teal ring-1 ring-border">
+            <Icons name="map-pin" class="h-5 w-5" />
+          </span>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-body/70">
+              {t("contact.location")}
+            </p>
+            <p class="text-sm font-medium text-ink">{pick(location, locale)}</p>
+          </div>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="rounded-lg bg-white p-2 text-teal ring-1 ring-border">
+            <Icons name="linkedin" class="h-5 w-5" />
+          </span>
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-medium text-ink hover:text-navy"
+            aria-label={`LinkedIn (${newTab})`}
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="rounded-lg bg-white p-2 text-teal ring-1 ring-border">
+            <Icons name="github" class="h-5 w-5" />
+          </span>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-medium text-ink hover:text-navy"
+            aria-label={`GitHub (${newTab})`}
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

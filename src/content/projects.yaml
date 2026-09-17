@@ -1,0 +1,41 @@
+# =============================================================================
+# PROJECTS  (each item is one project card)
+# =============================================================================
+# `tags` are technology names (language-neutral). Omit `githubUrl` / `demoUrl`
+# if a link does not exist — the card hides the missing button automatically.
+# `order` controls display position (lower first). `featured: true` adds a badge.
+
+- title:
+    en: "[PLACEHOLDER] Inventory Management System"
+    id: "[PLACEHOLDER] Sistem Manajemen Inventaris"
+  description:
+    en: "[PLACEHOLDER] A full-stack system for tracking warehouse inventory with real-time low-stock alerts and reporting."
+    id: "[PLACEHOLDER] Sistem full-stack untuk melacak inventaris gudang dengan peringatan stok rendah secara real-time dan pelaporan."
+  tags: ["React", "Node.js", "PostgreSQL"]
+  githubUrl: "https://github.com/your-username/inventory-system"
+  demoUrl: "https://your-demo.example.com"
+  featured: true
+  order: 1
+
+- title:
+    en: "[PLACEHOLDER] Campus Event Finder"
+    id: "[PLACEHOLDER] Pencari Acara Kampus"
+  description:
+    en: "[PLACEHOLDER] A mobile-friendly web app that aggregates and filters campus events by category and date."
+    id: "[PLACEHOLDER] Aplikasi web ramah seluler yang mengumpulkan dan memfilter acara kampus berdasarkan kategori dan tanggal."
+  tags: ["Astro", "Tailwind CSS", "TypeScript"]
+  githubUrl: "https://github.com/your-username/event-finder"
+  # demoUrl omitted on purpose => the "Live Demo" button is hidden
+  featured: false
+  order: 2
+
+- title:
+    en: "[PLACEHOLDER] Sales Data Dashboard"
+    id: "[PLACEHOLDER] Dasbor Data Penjualan"
+  description:
+    en: "[PLACEHOLDER] An interactive dashboard visualizing sales trends and KPIs for a small business case study."
+    id: "[PLACEHOLDER] Dasbor interaktif yang memvisualisasikan tren penjualan dan KPI untuk studi kasus bisnis kecil."
+  tags: ["Python", "Pandas", "Streamlit"]
+  # both links omitted on purpose => no link buttons render
+  featured: false
+  order: 3

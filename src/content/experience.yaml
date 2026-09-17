@@ -1,0 +1,38 @@
+# =============================================================================
+# EXPERIENCE  (internships / work; newest shown first automatically)
+# =============================================================================
+# Omit `endDate` for a current role => it renders as "Present" / "Sekarang".
+
+- title:
+    en: "[PLACEHOLDER] Data Analyst Intern"
+    id: "[PLACEHOLDER] Magang Analis Data"
+  organization:
+    en: "[PLACEHOLDER] Example Company"
+    id: "[PLACEHOLDER] Perusahaan Contoh"
+  startDate: "2024-06"
+  endDate: "2024-08"
+  bullets:
+    en:
+      - "[PLACEHOLDER] Cleaned and analyzed operational datasets to surface actionable insights."
+      - "[PLACEHOLDER] Built dashboards that reduced weekly reporting time by an estimated 30%."
+      - "[PLACEHOLDER] Collaborated with a cross-functional team to define reporting requirements."
+    id:
+      - "[PLACEHOLDER] Membersihkan dan menganalisis dataset operasional untuk menghasilkan wawasan yang dapat ditindaklanjuti."
+      - "[PLACEHOLDER] Membangun dasbor yang mengurangi waktu pelaporan mingguan sekitar 30%."
+      - "[PLACEHOLDER] Berkolaborasi dengan tim lintas fungsi untuk menentukan kebutuhan pelaporan."
+
+- title:
+    en: "[PLACEHOLDER] Web Development Volunteer"
+    id: "[PLACEHOLDER] Relawan Pengembangan Web"
+  organization:
+    en: "[PLACEHOLDER] Student Organization"
+    id: "[PLACEHOLDER] Organisasi Mahasiswa"
+  startDate: "2023-09"
+  # endDate omitted on purpose => shows "Present" / "Sekarang"
+  bullets:
+    en:
+      - "[PLACEHOLDER] Maintained and updated the organization's website content."
+      - "[PLACEHOLDER] Implemented responsive layout improvements for mobile users."
+    id:
+      - "[PLACEHOLDER] Memelihara dan memperbarui konten situs web organisasi."
+      - "[PLACEHOLDER] Menerapkan peningkatan tata letak responsif untuk pengguna seluler."

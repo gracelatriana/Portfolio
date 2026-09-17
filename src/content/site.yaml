@@ -1,0 +1,37 @@
+# =============================================================================
+# SITE METADATA + BIO + SOCIAL LINKS  (edit these placeholders with your info)
+# =============================================================================
+# All localized fields have an `en` (English) and `id` (Indonesian) variant.
+# Replace every "[PLACEHOLDER ...]" value below with your real content.
+
+name: "Your Name"
+
+tagline:
+  en: "Information Systems Student"
+  id: "Mahasiswa Sistem Informasi"
+
+roleTarget:
+  en: "Aspiring Business Analyst / Software Developer"
+  id: "Calon Business Analyst / Pengembang Perangkat Lunak"
+
+valueProp:
+  en: "[PLACEHOLDER] I build data-driven solutions that connect business needs with technology. Currently seeking internship and entry-level opportunities."
+  id: "[PLACEHOLDER] Saya membangun solusi berbasis data yang menghubungkan kebutuhan bisnis dengan teknologi. Saat ini mencari peluang magang dan posisi entry-level."
+
+bio:
+  en: "[PLACEHOLDER] I am an Information Systems student passionate about the intersection of business and technology. My interests include data analysis, web development, and systems design. I am actively seeking internships and professional opportunities where I can apply my skills and continue to grow."
+  id: "[PLACEHOLDER] Saya adalah mahasiswa Sistem Informasi yang tertarik pada persimpangan antara bisnis dan teknologi. Minat saya meliputi analisis data, pengembangan web, dan perancangan sistem. Saya aktif mencari magang dan peluang profesional untuk menerapkan keterampilan dan terus berkembang."
+
+email: "your.email@example.com"
+
+location:
+  en: "Jakarta, Indonesia"
+  id: "Jakarta, Indonesia"
+
+linkedin: "https://www.linkedin.com/in/your-profile"
+github: "https://github.com/your-username"
+
+# Files below must be placed in the /public folder. See README for details.
+resumeFile: "/resume.pdf"
+headshot: "/headshot.jpg"
+ogImage: "/og-image.png"

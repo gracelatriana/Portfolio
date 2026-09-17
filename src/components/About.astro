@@ -1,0 +1,64 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import Icons from "./Icons.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick } from "../i18n/utils";
+
+interface LocalizedText {
+  en: string;
+  id: string;
+}
+
+interface Props {
+  locale: Locale;
+  bio: LocalizedText;
+  university?: LocalizedText;
+  graduation?: string;
+  location: LocalizedText;
+}
+
+const { locale, bio, university, graduation, location } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<section id="about" class="section">
+  <div class="container-content">
+    <SectionHeading title={t("section.about")} />
+    <div class="grid gap-10 md:grid-cols-[2fr_1fr]">
+      <p class="text-lg leading-relaxed text-body" data-reveal>
+        {pick(bio, locale)}
+      </p>
+
+      <div
+        class="rounded-xl border border-border bg-surface p-6"
+        data-reveal
+      >
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-teal">
+          {t("about.quickFacts")}
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          {
+            university && (
+              <li class="flex items-start gap-2">
+                <span class="font-semibold text-ink">{t("about.university")}:</span>
+                <span>{pick(university, locale)}</span>
+              </li>
+            )
+          }
+          {
+            graduation && (
+              <li class="flex items-start gap-2">
+                <span class="font-semibold text-ink">{t("about.graduation")}:</span>
+                <span>{graduation}</span>
+              </li>
+            )
+          }
+          <li class="flex items-start gap-2">
+            <Icons name="map-pin" class="mt-0.5 h-4 w-4 text-teal" />
+            <span>{pick(location, locale)}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

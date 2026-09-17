@@ -1,0 +1,29 @@
+# =============================================================================
+# TECHNICAL SKILLS  (one entry per category)
+# =============================================================================
+# `items` are skill names (language-neutral). Category names are localized.
+# `order` controls display position (lower first).
+
+- category:
+    en: "Languages"
+    id: "Bahasa Pemrograman"
+  items: ["JavaScript", "TypeScript", "Python", "SQL", "Java"]
+  order: 1
+
+- category:
+    en: "Frameworks & Tools"
+    id: "Framework & Alat"
+  items: ["React", "Astro", "Node.js", "Tailwind CSS", "Git"]
+  order: 2
+
+- category:
+    en: "Databases"
+    id: "Basis Data"
+  items: ["PostgreSQL", "MySQL", "MongoDB"]
+  order: 3
+
+- category:
+    en: "Business & Analysis"
+    id: "Bisnis & Analisis"
+  items: ["Requirements Analysis", "Process Modeling (BPMN)", "Data Visualization", "Excel"]
+  order: 4

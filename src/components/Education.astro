@@ -1,0 +1,78 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick, formatDateRange } from "../i18n/utils";
+
+interface LocalizedText {
+  en: string;
+  id: string;
+}
+interface LocalizedArray {
+  en: string[];
+  id: string[];
+}
+interface EduEntry {
+  degree: LocalizedText;
+  institution: LocalizedText;
+  startDate: string;
+  endDate?: string;
+  coursework?: LocalizedArray;
+  honors?: LocalizedArray;
+}
+
+interface Props {
+  locale: Locale;
+  entries: EduEntry[];
+}
+
+const { locale, entries } = Astro.props;
+const t = useTranslations(locale);
+const present = t("experience.present");
+---
+
+<section id="education" class="section bg-surface">
+  <div class="container-content">
+    <SectionHeading title={t("section.education")} />
+    <div class="space-y-6">
+      {
+        entries.map((entry) => (
+          <article
+            class="rounded-xl border border-border bg-white p-6"
+            data-reveal
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-lg font-semibold text-ink">
+                {pick(entry.degree, locale)}
+              </h3>
+              <span class="text-sm font-medium text-teal">
+                {formatDateRange(entry.startDate, entry.endDate, present)}
+              </span>
+            </div>
+            <p class="mt-1 text-body">{pick(entry.institution, locale)}</p>
+
+            {entry.coursework && (
+              <div class="mt-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-body/70">
+                  {locale === "id" ? "Mata Kuliah Relevan" : "Relevant Coursework"}
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  {pick(entry.coursework, locale)?.map((course) => (
+                    <span class="tag-chip">{course}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {entry.honors && (
+              <ul class="mt-4 list-inside list-disc space-y-1 text-sm text-body">
+                {pick(entry.honors, locale)?.map((honor) => (
+                  <li>{honor}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

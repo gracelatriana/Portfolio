@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-padding-top: 5rem; /* offset for sticky header on anchor jumps */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-ink;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply scroll-mt-20 py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-navy text-white hover:bg-navy-hover focus-visible:ring-navy;
+  }
+
+  .btn-secondary {
+    @apply btn border border-border bg-white text-ink hover:border-teal hover:text-teal focus-visible:ring-teal;
+  }
+
+  .tag-chip {
+    @apply inline-flex items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-body;
+  }
+
+  .link-teal {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors hover:text-teal-hover;
+  }
+}
+
+/* Respect reduced-motion preferences for the fade-in-on-scroll utility. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Fade-in-on-scroll: hidden until observed, degrades gracefully with JS off. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* When JS is unavailable, always show content. */
+.no-js [data-reveal] {
+  opacity: 1;
+  transform: none;
+}

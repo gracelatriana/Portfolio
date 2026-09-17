@@ -1,0 +1,86 @@
+---
+import Icons from "./Icons.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick } from "../i18n/utils";
+
+interface LocalizedText {
+  en: string;
+  id: string;
+}
+
+interface Props {
+  locale: Locale;
+  title: LocalizedText;
+  description: LocalizedText;
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+}
+
+const { locale, title, description, tags, githubUrl, demoUrl, featured } =
+  Astro.props;
+const t = useTranslations(locale);
+const newTab = t("a11y.opensNewTab");
+---
+
+<article
+  class="flex h-full flex-col rounded-xl border border-border bg-white p-6 transition-shadow hover:shadow-md"
+  data-reveal
+>
+  <div class="flex items-start justify-between gap-2">
+    <h3 class="text-lg font-semibold text-ink">{pick(title, locale)}</h3>
+    {
+      featured && (
+        <span class="tag-chip border-teal/40 bg-teal/10 text-teal">
+          {t("projects.featured")}
+        </span>
+      )
+    }
+  </div>
+
+  <p class="mt-2 flex-1 text-sm leading-relaxed text-body">
+    {pick(description, locale)}
+  </p>
+
+  {
+    tags.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span class="tag-chip">{tag}</span>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    (githubUrl || demoUrl) && (
+      <div class="mt-5 flex flex-wrap items-center gap-4 border-t border-border pt-4">
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-teal"
+            aria-label={`${t("projects.viewCode")} (${newTab})`}
+          >
+            <Icons name="github" class="h-4 w-4" />
+            {t("projects.viewCode")}
+          </a>
+        )}
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-teal"
+            aria-label={`${t("projects.liveDemo")} (${newTab})`}
+          >
+            <Icons name="external" class="h-4 w-4" />
+            {t("projects.liveDemo")}
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>

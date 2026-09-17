@@ -1,0 +1,48 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import ProjectCard from "./ProjectCard.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+
+interface LocalizedText {
+  en: string;
+  id: string;
+}
+interface ProjectEntry {
+  title: LocalizedText;
+  description: LocalizedText;
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+}
+
+interface Props {
+  locale: Locale;
+  entries: ProjectEntry[];
+}
+
+const { locale, entries } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<section id="projects" class="section bg-surface">
+  <div class="container-content">
+    <SectionHeading title={t("section.projects")} />
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        entries.map((entry) => (
+          <ProjectCard
+            locale={locale}
+            title={entry.title}
+            description={entry.description}
+            tags={entry.tags}
+            githubUrl={entry.githubUrl}
+            demoUrl={entry.demoUrl}
+            featured={entry.featured}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+# =============================================================================
+# EDUCATION  (each list item is one entry; newest is shown first automatically)
+# =============================================================================
+# Add a new entry by copying a block. `endDate` may be omitted => "Present".
+
+- degree:
+    en: "[PLACEHOLDER] Bachelor of Information Systems"
+    id: "[PLACEHOLDER] Sarjana Sistem Informasi"
+  institution:
+    en: "[PLACEHOLDER] Your University"
+    id: "[PLACEHOLDER] Universitas Anda"
+  startDate: "2022-09"
+  endDate: "2026-07"
+  coursework:
+    en:
+      - "Database Systems"
+      - "Web Application Development"
+      - "Data Structures & Algorithms"
+      - "Business Process Management"
+    id:
+      - "Sistem Basis Data"
+      - "Pengembangan Aplikasi Web"
+      - "Struktur Data & Algoritma"
+      - "Manajemen Proses Bisnis"
+  honors:
+    en:
+      - "[PLACEHOLDER] Dean's List (2023, 2024)"
+    id:
+      - "[PLACEHOLDER] Daftar Dekan (2023, 2024)"
+
+- degree:
+    en: "[PLACEHOLDER] High School Diploma, Science Major"
+    id: "[PLACEHOLDER] Ijazah SMA, Jurusan IPA"
+  institution:
+    en: "[PLACEHOLDER] Your High School"
+    id: "[PLACEHOLDER] SMA Anda"
+  startDate: "2019-07"
+  endDate: "2022-06"

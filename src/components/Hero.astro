@@ -1,0 +1,107 @@
+---
+import Icons from "./Icons.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick } from "../i18n/utils";
+
+interface Props {
+  locale: Locale;
+  name: string;
+  tagline: { en: string; id: string };
+  roleTarget: { en: string; id: string };
+  valueProp: { en: string; id: string };
+  headshot: string;
+  resumeFile: string;
+  linkedin: string;
+  github: string;
+}
+
+const {
+  locale,
+  name,
+  tagline,
+  roleTarget,
+  valueProp,
+  headshot,
+  resumeFile,
+  linkedin,
+  github,
+} = Astro.props;
+
+const t = useTranslations(locale);
+const newTab = t("a11y.opensNewTab");
+---
+
+<section id="top" class="section pt-24">
+  <div
+    class="container-content grid items-center gap-10 md:grid-cols-[1.5fr_1fr]"
+  >
+    <div data-reveal>
+      <p class="text-sm font-semibold uppercase tracking-wide text-teal">
+        {pick(tagline, locale)}
+      </p>
+      <h1 class="mt-3 text-4xl font-bold leading-tight sm:text-5xl">{name}</h1>
+      <p class="mt-2 text-xl font-medium text-body">{pick(roleTarget, locale)}</p>
+      <p class="mt-5 max-w-xl text-base leading-relaxed text-body">
+        {pick(valueProp, locale)}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href={resumeFile} download class="btn-primary">
+          <Icons name="download" class="h-4 w-4" />
+          {t("hero.downloadResume")}
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <Icons name="mail" class="h-4 w-4" />
+          {t("hero.contactMe")}
+        </a>
+      </div>
+
+      <div class="mt-6 flex items-center gap-4">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-body transition-colors hover:text-navy"
+          aria-label={`LinkedIn (${newTab})`}
+        >
+          <Icons name="linkedin" class="h-6 w-6" />
+        </a>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-body transition-colors hover:text-navy"
+          aria-label={`GitHub (${newTab})`}
+        >
+          <Icons name="github" class="h-6 w-6" />
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center md:justify-end" data-reveal>
+      <div
+        class="relative h-56 w-56 overflow-hidden rounded-2xl border border-border bg-surface shadow-sm sm:h-64 sm:w-64"
+      >
+        <!--
+          Headshot: place your photo at public/headshot.jpg (see README).
+          onerror gracefully hides a missing image and shows initials fallback.
+        -->
+        <img
+          src={headshot}
+          alt={name}
+          width="256"
+          height="256"
+          loading="eager"
+          class="h-full w-full object-cover"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div
+          class="absolute inset-0 hidden items-center justify-center bg-navy text-4xl font-bold text-white"
+          aria-hidden="true"
+        >
+          {name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase()}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

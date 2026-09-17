@@ -1,0 +1,130 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "./Hero.astro";
+import About from "./About.astro";
+import Education from "./Education.astro";
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+import Research from "./Research.astro";
+import Skills from "./Skills.astro";
+import Certifications from "./Certifications.astro";
+import Contact from "./Contact.astro";
+import ScrollReveal from "./ScrollReveal.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations, pick, byDateDesc, formatDateRange } from "../i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+// --- Load content collections -------------------------------------------
+const siteEntries = await getCollection("site");
+const siteData = siteEntries[0].data; // single `site.yaml` entry
+
+const education = (await getCollection("education"))
+  .map((e) => e.data)
+  .sort((a, b) => byDateDesc(a.startDate, b.startDate));
+
+const experience = (await getCollection("experience"))
+  .map((e) => e.data)
+  .sort((a, b) => byDateDesc(a.startDate, b.startDate));
+
+const projects = (await getCollection("projects"))
+  .map((e) => e.data)
+  .sort((a, b) => a.order - b.order);
+
+const research = (await getCollection("research"))
+  .map((e) => e.data)
+  .sort((a, b) => byDateDesc(a.date, b.date));
+
+const skills = (await getCollection("skills"))
+  .map((e) => e.data)
+  .sort((a, b) => a.order - b.order);
+
+const certifications = (await getCollection("certifications"))
+  .map((e) => e.data)
+  .sort((a, b) => byDateDesc(a.date, b.date));
+
+// Optional sections are hidden entirely (and dropped from nav) when empty.
+const hasResearch = research.length > 0;
+const hasCertifications = certifications.length > 0;
+
+// --- Build nav (conditionally include optional sections) -----------------
+const navItems = [
+  { key: "nav.about", href: "#about" },
+  { key: "nav.education", href: "#education" },
+  { key: "nav.experience", href: "#experience" },
+  { key: "nav.projects", href: "#projects" },
+  ...(hasResearch ? [{ key: "nav.research", href: "#research" }] : []),
+  { key: "nav.skills", href: "#skills" },
+  ...(hasCertifications
+    ? [{ key: "nav.certifications", href: "#certifications" }]
+    : []),
+  { key: "nav.contact", href: "#contact" },
+];
+
+// --- About quick facts derived from latest education entry ---------------
+const latestEdu = education[0];
+const graduation = latestEdu
+  ? formatDateRange(
+      latestEdu.startDate,
+      latestEdu.endDate,
+      t("experience.present"),
+    ).split("–")[1]?.trim()
+  : undefined;
+
+// --- SEO ------------------------------------------------------------------
+const pageTitle = `${siteData.name} — ${pick(siteData.roleTarget, locale)}`;
+const pageDescription = pick(siteData.valueProp, locale) ?? "";
+---
+
+<BaseLayout
+  locale={locale}
+  title={pageTitle}
+  description={pageDescription}
+  ogImage={siteData.ogImage}
+  navItems={navItems}
+  resumeFile={siteData.resumeFile}
+  linkedin={siteData.linkedin}
+  github={siteData.github}
+  name={siteData.name}
+>
+  <Hero
+    locale={locale}
+    name={siteData.name}
+    tagline={siteData.tagline}
+    roleTarget={siteData.roleTarget}
+    valueProp={siteData.valueProp}
+    headshot={siteData.headshot}
+    resumeFile={siteData.resumeFile}
+    linkedin={siteData.linkedin}
+    github={siteData.github}
+  />
+
+  <About
+    locale={locale}
+    bio={siteData.bio}
+    university={latestEdu?.institution}
+    graduation={graduation}
+    location={siteData.location}
+  />
+
+  <Education locale={locale} entries={education} />
+  <Experience locale={locale} entries={experience} />
+  <Projects locale={locale} entries={projects} />
+  {hasResearch && <Research locale={locale} entries={research} />}
+  <Skills locale={locale} groups={skills} />
+  {hasCertifications && <Certifications locale={locale} entries={certifications} />}
+  <Contact
+    locale={locale}
+    email={siteData.email}
+    location={siteData.location}
+    linkedin={siteData.linkedin}
+    github={siteData.github}
+  />
+
+  <ScrollReveal />
+</BaseLayout>

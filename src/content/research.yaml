@@ -1,0 +1,18 @@
+# =============================================================================
+# RESEARCH / PUBLICATIONS  (optional)
+# =============================================================================
+# If you have NO research to show, delete every entry below (leave the file
+# with just comments, or an empty list `[]`). The whole Research section AND
+# its nav link are hidden automatically when this collection is empty.
+
+- title:
+    en: "[PLACEHOLDER] A Study on User Adoption of Mobile Banking"
+    id: "[PLACEHOLDER] Studi Adopsi Pengguna Layanan Mobile Banking"
+  venue:
+    en: "[PLACEHOLDER] Undergraduate Research Symposium"
+    id: "[PLACEHOLDER] Simposium Penelitian Sarjana"
+  date: "2024-05"
+  summary:
+    en: "[PLACEHOLDER] Investigated factors influencing mobile banking adoption among university students using a survey-based approach and regression analysis."
+    id: "[PLACEHOLDER] Menyelidiki faktor-faktor yang memengaruhi adopsi mobile banking di kalangan mahasiswa menggunakan pendekatan berbasis survei dan analisis regresi."
+  link: "https://example.com/your-paper.pdf"

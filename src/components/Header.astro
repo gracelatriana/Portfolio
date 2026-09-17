@@ -1,0 +1,152 @@
+---
+import Icons from "./Icons.astro";
+import LanguageToggle from "./LanguageToggle.astro";
+import type { Locale } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+
+interface NavItem {
+  key: string;
+  href: string;
+}
+
+interface Props {
+  locale: Locale;
+  navItems: NavItem[];
+  resumeFile: string;
+  linkedin: string;
+  github: string;
+  name: string;
+}
+
+const { locale, navItems, resumeFile, linkedin, github, name } = Astro.props;
+const t = useTranslations(locale);
+const newTab = t("a11y.opensNewTab");
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-border bg-base/90 backdrop-blur supports-[backdrop-filter]:bg-base/75"
+>
+  <div class="container-content flex h-16 items-center justify-between gap-4">
+    <a href="#top" class="font-heading text-lg font-bold text-ink">{name}</a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-sm font-medium text-body transition-colors hover:text-navy"
+          >
+            {t(item.key as any)}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-body transition-colors hover:text-navy"
+        aria-label={`LinkedIn (${newTab})`}
+      >
+        <Icons name="linkedin" class="h-5 w-5" />
+      </a>
+      <a
+        href={github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-body transition-colors hover:text-navy"
+        aria-label={`GitHub (${newTab})`}
+      >
+        <Icons name="github" class="h-5 w-5" />
+      </a>
+      <LanguageToggle locale={locale} />
+      <a href={resumeFile} download class="btn-primary">
+        <Icons name="download" class="h-4 w-4" />
+        {t("hero.downloadResume")}
+      </a>
+    </div>
+
+    <!-- Mobile controls -->
+    <div class="flex items-center gap-2 lg:hidden">
+      <LanguageToggle locale={locale} />
+      <button
+        type="button"
+        id="mobile-menu-button"
+        class="rounded-md p-2 text-ink hover:bg-surface"
+        aria-label={t("a11y.openMenu")}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Icons name="menu" class="h-6 w-6" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu" class="hidden border-t border-border bg-base lg:hidden">
+    <nav class="container-content flex flex-col py-4" aria-label="Mobile">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="mobile-nav-link rounded-md px-2 py-3 text-base font-medium text-body hover:bg-surface hover:text-navy"
+          >
+            {t(item.key as any)}
+          </a>
+        ))
+      }
+      <div class="mt-4 flex items-center gap-4 border-t border-border pt-4">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-body hover:text-navy"
+          aria-label={`LinkedIn (${newTab})`}
+        >
+          <Icons name="linkedin" class="h-6 w-6" />
+        </a>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-body hover:text-navy"
+          aria-label={`GitHub (${newTab})`}
+        >
+          <Icons name="github" class="h-6 w-6" />
+        </a>
+        <a href={resumeFile} download class="btn-primary ml-auto">
+          <Icons name="download" class="h-4 w-4" />
+          {t("hero.downloadResume")}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  function closeMenu() {
+    menu?.classList.add("hidden");
+    btn?.setAttribute("aria-expanded", "false");
+  }
+
+  btn?.addEventListener("click", () => {
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
+      closeMenu();
+    } else {
+      menu?.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  // Close the menu after tapping a link (anchor navigation).
+  document
+    .querySelectorAll(".mobile-nav-link")
+    .forEach((link) => link.addEventListener("click", closeMenu));
+</script>
